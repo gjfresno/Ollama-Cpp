@@ -22,7 +22,7 @@ int main() {
         json::value request;
         request[U("model")] = json::value::string(U("mistral"));
         request[U("prompt")] = json::value::string(U("¿Qué es la inteligencia artificial?"));
-        request[U("stream")] = json::value::boolean(true);
+        request[U("stream")] = json::value::boolean(false);
         request[U("max_tokens")] = json::value::number(50); //Esto limita la cantidad de palabras en la respuesta, haciéndola más rápida.
 
         // Enviar la solicitud POST
