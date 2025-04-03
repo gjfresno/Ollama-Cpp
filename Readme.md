@@ -29,6 +29,30 @@ Ollama es un servidor local que permite ejecutar modelos de lenguaje como `mistr
 
 Esto dejará Ollama ejecutándose en `http://localhost:11434`.
 
+##  Usar Ollama de forma independiente
+
+Puedes usar Ollama sin necesidad de código C++, directamente desde la terminal:
+
+- **Modo interactivo (chat con el modelo):**
+  ```sh
+  ollama run mistral
+  ```
+
+- **Ejecutar un prompt único:**
+  ```sh
+  echo "¿Qué es la inteligencia artificial?" | ollama run mistral
+  ```
+
+- **Ver modelos disponibles en el sistema:**
+  ```sh
+  ollama list
+  ```
+
+- **Monitorear el uso de recursos:**
+  ```sh
+  ollama ps
+  ```
+
 ---
 
 **Los modelos de lenguaje** como los de **Ollama** (Llama 2, Mistral, Gemma, etc.) tienen diferencias clave en **arquitectura, tamaño, entrenamiento y uso ideal**. Aquí te explico **cómo elegir el mejor para cada caso**.  
@@ -171,5 +195,11 @@ int main() {
    - `stream`: `false` indica que esperamos la respuesta completa.
    - `max_tokens`: Limita la cantidad de palabras generadas.
 3. **Procesamiento de la respuesta:** Se extrae el JSON de la respuesta y se muestra en consola.
+
+---
+
+
+
+
 
 
